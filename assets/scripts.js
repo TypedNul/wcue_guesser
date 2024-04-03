@@ -5,7 +5,7 @@ fetch('assets/database/database.json')
   .then(data => {
     const infoElement = document.getElementById('info')
 
-    const randomIndex = Math.floor(Math.random() * data.names.length);
+    const randomIndex = Math.floor(Math.random() * data.nomes.length);
     const randomValue = data[randomIndex].name;
 
     console.log(randomValue); 
