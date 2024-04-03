@@ -3,12 +3,22 @@
 fetch('assets/database/database.json')
   .then(response => response.json()) 
   .then(data => {
-    const infoElement = document.getElementById('info')
+    const image = document.getElementById('image')
+    const info = document.getElementById('info')
 
-    const randomIndex = Math.floor(Math.random() * data.nomes.length);
-    const randomValue = data.nomes[randomIndex];
+    const randIndex1 = Math.floor(Math.random() * data.nomes.length);
+    const randNome1 = data.nomes[randIndex];
 
-    console.log(randomValue); 
+    console.log(randNome1); 
+
+    const randIndex2 = Math.floor(Math.random() * data.imgs.length);
+    const randNome2 = data.imgs[randIndex2];
+
+    console.log(randNome2)
+
+    image.textContent = randNome2 
+    info.textContent = randNome1 
+
 
   })
   .catch(error => console.error("Erro carregando database JSON: ", error))
