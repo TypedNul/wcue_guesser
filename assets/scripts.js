@@ -1,9 +1,10 @@
 // achar listas do .json
 
 fetch('assets/database/database.json')
-  .then(response => response.json()) // Converte a resposta para JSON
+  .then(response => response.json()) 
   .then(data => {
     const infoElement = document.getElementById('info')
+
     const data_pars = JSON.parse(data);
 
     const randomIndex = Math.floor(Math.random() * data_pars.names.length);
