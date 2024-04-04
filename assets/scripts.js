@@ -35,9 +35,10 @@ function fetchar() {
       const butao1 = document.getElementById('butao1') 
       const butao2 = document.getElementById('butao2') 
       const butao3 = document.getElementById('butao3')
+
+      const score = document.getElementById('score') 
       
       const randIndex2 = Math.floor(Math.random() * data.imgs.length);
-
       const randNome2 = data.imgs[randIndex2];
 
       const randIndex = Math.floor(Math.random() * 3) + 1;
@@ -54,6 +55,9 @@ function fetchar() {
       } while (hasDuplicates(butaoes))
 
       image.src = `assets/database/images/${randNome2}.png`;
+
+      score.textContent = `${respostas_corretas - respostas_erradas}` 
+      
     })
     .catch(error => console.error("Erro carregando database JSON: ", error))  
 
