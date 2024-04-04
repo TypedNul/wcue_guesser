@@ -14,7 +14,7 @@ fetch('assets/database/database.json')
     const butao2 = document.getElementById('butao2') 
     const butao3 = document.getElementById('butao3')
     
-    while (butao1.textContent !== butao2.textContent || butao2.textContent !== butao3.textContent || butao1.textContent !== butao3.textContent) {
+    while (butao1.textContent == butao2.textContent || butao2.textContent == butao3.textContent || butao1.textContent == butao3.textContent) {
       randomizar(data.nomes, document.getElementById('butao1'))
       randomizar(data.nomes, document.getElementById('butao2'))
       randomizar(data.nomes, document.getElementById('butao3'))
