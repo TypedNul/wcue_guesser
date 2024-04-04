@@ -48,7 +48,7 @@ function fetchar() {
       const butaoes = [butao1, butao2, butao3]
 
       do {
-        otherButtons.forEach(button => randomizar(data.nomes, button));
+        butaoes.forEach(button => randomizar(data.nomes, button));
       } while (hasDuplicates(butaoes))
 
       image.src = `assets/database/images/${randNome2}.png`;
