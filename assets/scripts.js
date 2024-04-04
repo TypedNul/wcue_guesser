@@ -15,8 +15,8 @@ fetch('assets/database/database.json')
     const randNome2 = data.imgs[randIndex2];
 
     console.log(randNome2)
-
-    image.textContent = randNome2 
+    
+    image.src = `assets/database/images/${randNome2}` 
     info.textContent = randNome1 
 
 
