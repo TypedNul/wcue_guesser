@@ -66,7 +66,7 @@ function fetchar() {
 }
 
 function checarResposta(id) {
-  butaoApertado = document.getElementById(id)
+  const butaoApertado = document.getElementById(id)
   if butaoApertado.id = id:
     respostas_corretas += 1
     fetchar()
