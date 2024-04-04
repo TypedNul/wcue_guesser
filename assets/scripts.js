@@ -13,6 +13,10 @@ function randomizar(lista, butao) {
 
 }
 
+function hasDuplicates(array) {
+  return new Set(array).size !== array.length;
+}
+
 function fetchar() {
   fetch('assets/database/database.json')
     .then(response => response.json()) 
@@ -32,7 +36,9 @@ function fetchar() {
       buttonWithSameIndex.textContent = data.nomes[randIndex2]; // Assign the image name to the randomly selected button
 
       const otherButtons = [butao1, butao2, butao3].filter(button => button !== buttonWithSameIndex);
-      otherButtons.forEach(button => randomizar(data.nomes, button));
+      
+      while (hasDuplicates(otherButtons)):
+        otherButtons.forEach(button => randomizar(data.nomes, button));
 
       console.log(randNome2);
       image.src = `assets/database/images/${randNome2}.png`;
