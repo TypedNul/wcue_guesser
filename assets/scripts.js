@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
   const buttons = document.querySelectorAll('button');
   buttons.forEach(button => {
-    button.addEventListener('click', fetchar);
+    button.addEventListener('click', checarResposta);
   });
 
   fetchar()
 });
+
+global respostas_corretas = 0;
+global respostas_erradas = 0;
 
 function randomizar(lista, butao) {
   const randIndex = Math.floor(Math.random() * lista.length);
@@ -44,7 +47,7 @@ function fetchar() {
       const randNome2 = data.imgs[randIndex2];
 
       const randIndex = Math.floor(Math.random() * 3) + 1;
-      const butaoCerto = document.getElementById(`butao${randIndex}`);
+      global const butaoCerto = document.getElementById(`butao${randIndex}`);
       butaoCerto.textContent = data.nomes[randIndex2]; 
 
       console.log(`img_ind = ${randIndex2}, but_ind = ${randIndex}, butaoCerto = ${butaoCerto.innerHTML}`)
@@ -58,5 +61,17 @@ function fetchar() {
       image.src = `assets/database/images/${randNome2}.png`;
     })
     .catch(error => console.error("Erro carregando database JSON: ", error))  
+
+}
+
+function checarResposta(id) {
+  butaoApertado = document.getElementById(id)
+  if butaoApertado.id = id:
+    respostas_corretas += 1
+    fetchar()
+  else: 
+    respostas_erradas += 1
+    fetchar()
+
 
 }
