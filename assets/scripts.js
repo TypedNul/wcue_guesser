@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 var respostas_corretas = 0;
 var respostas_erradas = 0;
-var butao_certo = null;
+var butaoCerto = null;
 
 function randomizar(lista, butao) {
   const randIndex = Math.floor(Math.random() * lista.length);
