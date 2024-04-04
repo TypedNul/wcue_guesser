@@ -38,7 +38,7 @@ function fetchar() {
       const randNome2 = data.imgs[randIndex2];
 
       const randIndex = Math.floor(Math.random() * 3) + 1; // Randomly select a button (1, 2, or 3)
-      const butaoCerto = document.getElementById(`butao${randomButtonIndex}`);
+      const butaoCerto = document.getElementById(`butao${randIndex}`);
       butaoCerto.textContent = data.nomes[randIdex]; // Assign the image name to the randomly selected button
 
       const otherButtons = [butao1, butao2, butao3].filter(button => button !== butaoCerto);
