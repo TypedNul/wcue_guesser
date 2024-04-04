@@ -18,12 +18,16 @@ function hasDuplicates(array) {
   
   array.forEach(button => {
     buttonTexts.push(button.innerHTML);
+    console.log(`butao¨: ${button}`)
   });
 
+  console.log(`set: ${new Set(buttonTexts).size} vs ${buttonTexts.length}`)
   return new Set(buttonTexts).size !== buttonTexts.length;
 }
 
 function fetchar() {
+  console.log('iniciando fetchar')
+  
   fetch('assets/database/database.json')
     .then(response => response.json()) 
     .then(data => {
@@ -47,8 +51,9 @@ function fetchar() {
         otherButtons.forEach(button => randomizar(data.nomes, button));
       } while (hasDuplicates(otherButtons))
 
-      console.log(randNome2);
       image.src = `assets/database/images/${randNome2}.png`;
     })
     .catch(error => console.error("Erro carregando database JSON: ", error))  
+
+  console.log("finalizando fetchar")
 }
