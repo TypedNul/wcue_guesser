@@ -17,7 +17,7 @@ function hasDuplicates(array) {
   const buttonTexts = [];
   
   array.forEach(button => {
-    buttonTexts.push(button.textContent);
+    buttonTexts.push(button.innerHTML);
   });
 
   return new Set(buttonTexts).size !== buttonTexts.length;
