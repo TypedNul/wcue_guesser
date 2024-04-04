@@ -25,9 +25,7 @@ fetch('assets/database/database.json')
 
     console.log(randNome2)
 
-    image.src = `assets/database/images/${randNome2}.png` 
-    info.textContent = randNome1 
-
+    image.src = `assets/database/images/${randNome2}.png`  
 
   })
   .catch(error => console.error("Erro carregando database JSON: ", error))
