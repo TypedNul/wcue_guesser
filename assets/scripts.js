@@ -1,6 +1,6 @@
 function randomizar(lista, butao) {
   const randIndex = Math.floor(Math.random() * lista.length);
-  butao.textContent = lista[randIndex];
+  butao.innerHTML = lista[randIndex];
 }
 
 
