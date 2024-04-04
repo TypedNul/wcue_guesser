@@ -45,15 +45,14 @@ function fetchar() {
       const butaoCerto = document.getElementById(`butao${randIndex}`);
       butaoCerto.textContent = data.nomes[randIndex]; // Assign the image name to the randomly selected button
 
-      const otherButtons = [butao1, butao2, butao3].filter(button => button !== butaoCerto);
-      
+      const butaoes = [butao1, butao2, butao3]
+
       do {
         otherButtons.forEach(button => randomizar(data.nomes, button));
-      } while (hasDuplicates(otherButtons))
+      } while (hasDuplicates(butaoes))
 
       image.src = `assets/database/images/${randNome2}.png`;
     })
     .catch(error => console.error("Erro carregando database JSON: ", error))  
 
-  console.log("finalizando fetchar")
 }
