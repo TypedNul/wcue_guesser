@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+  fetchar()
+  
   const buttons = document.querySelectorAll('button');
   buttons.forEach(button => {
     button.addEventListener('click', checarResposta(button.id));
   });
-
-  fetchar()
 });
 
 var respostas_corretas = 0;
@@ -67,15 +67,13 @@ function fetchar() {
 }
 
 function checarResposta(id) {
-  const butaoApertado = document.getElementById(id)
-  if (butaoCerto.id !== null) {
-    if (butaoCerto.id === id) {
+
+  if (butaoCerto.id === id) {
     respostas_corretas += 1
     fetchar()
   } else { 
     respostas_erradas += 1
     fetchar()
-  } 
   }
     
 
