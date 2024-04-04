@@ -41,9 +41,9 @@ function fetchar() {
 
       const randNome2 = data.imgs[randIndex2];
 
-      const randIndex = Math.floor(Math.random() * 3) + 1; // Randomly select a button (1, 2, or 3)
+      const randIndex = Math.floor(Math.random() * 3) + 1;
       const butaoCerto = document.getElementById(`butao${randIndex}`);
-      butaoCerto.textContent = data.nomes[randIndex]; // Assign the image name to the randomly selected button
+      butaoCerto.textContent = data.nomes[randIndex]; 
 
       console.log(`img_ind = ${randIndex2}, but_ind = ${randIndex}, butaoCerto = ${butaoCerto.innerHTML}`)
       const butaoes = [butao1, butao2, butao3]
