@@ -13,9 +13,8 @@ function randomizar(lista, butao) {
 
 }
 
-// é bem especifico e nao general-use, cuidado pq eu nao sei q porra eu fiz aq 
 
-function hasDuplicates(array) {
+function hasDuplicates(array) { // é bem especifico e nao general-use, cuidado pq eu nao sei q porra eu fiz aq 
   const buttonTexts = [];
   
   array.forEach(button => {
@@ -27,6 +26,7 @@ function hasDuplicates(array) {
   return new Set(buttonTexts).size !== buttonTexts.length;
 }
 
+// basicamente a função fetch() soq dentro duma outra função. pq? irmao sei lá eu programei isso as 2 da manhã
 function fetchar() {
   console.log('iniciando fetchar')
   
@@ -68,7 +68,7 @@ function fetchar() {
       score.textContent = `${respostas_corretas - respostas_erradas}` 
       
     })
-    .catch(error => console.error("Erro carregando database JSON: ", error))  
+    .catch(error => console.error("mais um erro no fetchar?? deus tenha misericórdia. ", error))  
 
 }
 
