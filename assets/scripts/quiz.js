@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', fetchar()) // basicamente inicia o fetchar() pra botar imagem e opção normal já no começo. tem q mudar 
+// document.addEventListener('DOMContentLoaded', fetchar()) // basicamente inicia o fetchar() pra botar imagem e opção normal já no começo. tem q mudar 
                                                          // pra não fazer isso mesmo com outras seções abertas
 
 // variáveis globais
