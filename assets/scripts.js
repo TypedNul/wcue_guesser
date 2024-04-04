@@ -18,7 +18,7 @@ fetch('assets/database/database.json')
       randomizar(data.nomes, document.getElementById('butao1'))
       randomizar(data.nomes, document.getElementById('butao2'))
       randomizar(data.nomes, document.getElementById('butao3'))
-    
+    }
 
     const randIndex2 = Math.floor(Math.random() * data.imgs.length);
     const randNome2 = data.imgs[randIndex2];
@@ -29,5 +29,5 @@ fetch('assets/database/database.json')
     info.textContent = randNome1 
 
 
-  }
+  })
   .catch(error => console.error("Erro carregando database JSON: ", error))
