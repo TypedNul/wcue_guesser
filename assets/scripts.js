@@ -29,5 +29,5 @@ fetch('assets/database/database.json')
     info.textContent = randNome1 
 
 
-  })
+  }
   .catch(error => console.error("Erro carregando database JSON: ", error))
