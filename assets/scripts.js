@@ -3,9 +3,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const buttons = document.querySelectorAll('button');
   buttons.forEach(button => {
-    button.addEventListener('click', fetchar);
+    button.addEventListener('click', checar_resposta);
   });
 });
+
+function randomizar(lista, butao) {
+  const randIndex = Math.floor(Math.random() * lista.length);
+  butao.innerHTML = lista[randIndex];
+
+}
 
 function fetchar() {
   fetch('assets/database/database.json')
@@ -40,5 +46,6 @@ function fetchar() {
     .catch(error => console.error("Erro carregando database JSON: ", error))  
 }
 
-
-
+function checar_resposta() {
+  fetchar()
+}
