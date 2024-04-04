@@ -25,7 +25,6 @@ function fetchar() {
       
       const randIndex2 = Math.floor(Math.random() * data.imgs.length);
 
-      const randIndex2 = Math.floor(Math.random() * data.imgs.length);
       const randNome2 = data.imgs[randIndex2];
 
       const randomButtonIndex = Math.floor(Math.random() * 3) + 1; // Randomly select a button (1, 2, or 3)
