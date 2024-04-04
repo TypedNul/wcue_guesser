@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const buttons = document.querySelectorAll('button');
   buttons.forEach(button => {
-    button.addEventListener('click', checar_resposta);
+    button.addEventListener('click', fetchar);
   });
 });
 
@@ -18,6 +18,7 @@ function fetchar() {
     .then(response => response.json()) 
     .then(data => {
       const image = document.getElementById('image')
+
       const butao1 = document.getElementById('butao1') 
       const butao2 = document.getElementById('butao2') 
       const butao3 = document.getElementById('butao3')
@@ -40,12 +41,6 @@ function fetchar() {
         matchingNames = data.nomes.filter(nome => nome === randNome2).length;
       } while (matchingNames !== 1);
 
-
-
     })
     .catch(error => console.error("Erro carregando database JSON: ", error))  
-}
-
-function checar_resposta() {
-  fetchar()
 }
