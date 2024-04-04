@@ -1,11 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-  fetchar()
-  
-  const buttons = document.querySelectorAll('button');
-  buttons.forEach(button => {
-    button.addEventListener('click', checarResposta(this));
-  });
-});
+document.addEventListener('DOMContentLoaded', fetchar())
 
 var respostas_corretas = 0;
 var respostas_erradas = 0;
