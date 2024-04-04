@@ -7,8 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
   fetchar()
 });
 
-global var respostas_corretas = 0;
-global var respostas_erradas = 0;
+var respostas_corretas = 0;
+var respostas_erradas = 0;
+var botao_certo = null;
 
 function randomizar(lista, butao) {
   const randIndex = Math.floor(Math.random() * lista.length);
@@ -47,7 +48,7 @@ function fetchar() {
       const randNome2 = data.imgs[randIndex2];
 
       const randIndex = Math.floor(Math.random() * 3) + 1;
-      global const butaoCerto = document.getElementById(`butao${randIndex}`);
+      butaoCerto = document.getElementById(`butao${randIndex}`);
       butaoCerto.textContent = data.nomes[randIndex2]; 
 
       console.log(`img_ind = ${randIndex2}, but_ind = ${randIndex}, butaoCerto = ${butaoCerto.innerHTML}`)
