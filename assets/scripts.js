@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 var respostas_corretas = 0;
 var respostas_erradas = 0;
-var butaoCerto = null;
+var butaoCerto;
 
 function randomizar(lista, butao) {
   const randIndex = Math.floor(Math.random() * lista.length);
@@ -48,6 +48,7 @@ function fetchar() {
       const randNome2 = data.imgs[randIndex2];
 
       const randIndex = Math.floor(Math.random() * 3) + 1;
+      
       butaoCerto = document.getElementById(`butao${randIndex}`);
       butaoCerto.textContent = data.nomes[randIndex2]; 
 
@@ -67,12 +68,15 @@ function fetchar() {
 
 function checarResposta(id) {
   const butaoApertado = document.getElementById(id)
-  if (butaoCerto.id === id) {
+  if (butaoCerto.id !== null) {
+    if (butaoCerto.id === id) {
     respostas_corretas += 1
     fetchar()
   } else { 
     respostas_erradas += 1
     fetchar()
+  } 
   }
+    
 
 }
