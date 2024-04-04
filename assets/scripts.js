@@ -46,9 +46,10 @@ function fetchar() {
       butaoCerto.textContent = data.nomes[randIndex]; // Assign the image name to the randomly selected button
 
       const butaoes = [butao1, butao2, butao3]
+      const butaoes_sq2 = butaoes.filter(button => button !== butaoCerto)
 
       do {
-        butaoes.forEach(button => randomizar(data.nomes, button));
+        butaoes_sq2.forEach(button => randomizar(data.nomes, button));
       } while (hasDuplicates(butaoes))
 
       image.src = `assets/database/images/${randNome2}.png`;
