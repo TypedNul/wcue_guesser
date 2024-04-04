@@ -18,7 +18,7 @@ function hasDuplicates(array) {
   
   array.forEach(button => {
     buttonTexts.push(button.innerHTML);
-    console.log(`butao¨: ${button}`)
+    console.log(`butao¨: ${button.innerHTML}`)
   });
 
   console.log(`set: ${new Set(buttonTexts).size} vs ${buttonTexts.length}`)
@@ -45,6 +45,7 @@ function fetchar() {
       const butaoCerto = document.getElementById(`butao${randIndex}`);
       butaoCerto.textContent = data.nomes[randIndex]; // Assign the image name to the randomly selected button
 
+      console.log(`img_ind = ${randIndex2}, but_ind = ${randIndex}, butaoCerto = ${butaoCerto.innerHTML}`)
       const butaoes = [butao1, butao2, butao3]
       const butaoes_sq2 = butaoes.filter(button => button !== butaoCerto)
 
