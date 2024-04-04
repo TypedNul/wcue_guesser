@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
   fetchar()
 });
 
-global respostas_corretas = 0;
-global respostas_erradas = 0;
+global var respostas_corretas = 0;
+global var respostas_erradas = 0;
 
 function randomizar(lista, butao) {
   const randIndex = Math.floor(Math.random() * lista.length);
