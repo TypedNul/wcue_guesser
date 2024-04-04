@@ -1,7 +1,8 @@
 {
 
-	"imgs": ["img_1", "img_2", "img_3"],
-	"nomes": ["Manto Barrento", "Estrela Selvagem", "Arroio de Trigo", "Filhote de Lobo"]
+	"imgs": ["img_1", "img_2", "img_3", "img_4", "img_5", "img_6"],
+	"nomes": ["Manto Barrento", "Estrela Selvagem", "Arroio de Trigo", "Filhote de Lobo", "Sussurro Cortante", "Zippo", "Moranguinho",
+	"Colapso Suave"]
 
 
 }
