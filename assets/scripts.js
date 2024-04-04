@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   const buttons = document.querySelectorAll('button');
   buttons.forEach(button => {
-    button.addEventListener('click', checarResposta(button.id));
+    button.addEventListener('click', checarResposta(this));
   });
 });
 
@@ -66,9 +66,9 @@ function fetchar() {
 
 }
 
-function checarResposta(id) {
+function checarResposta(element) {
 
-  if (butaoCerto.id === id) {
+  if (butaoCerto.id === element.id) {
     respostas_corretas += 1
     fetchar()
   } else { 
