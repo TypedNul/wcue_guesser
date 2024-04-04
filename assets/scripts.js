@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-  fetchar()
-
   const buttons = document.querySelectorAll('button');
   buttons.forEach(button => {
     button.addEventListener('click', fetchar);
   });
+
+  fetchar()
 });
 
 function randomizar(lista, butao) {
@@ -36,9 +36,10 @@ function fetchar() {
         randomizar(data.nomes, butao2);
         randomizar(data.nomes, butao3);
 
-        const randNome2 = data.imgs[randIndex2];
+        matchingIndexes = data.nomes.filter((_, index) => index === randIndex2).length;
 
-        matchingNames = data.nomes.filter(nome => nome === randNome2).length;
+        console.log(`Loop: ${butao1.innerHTML}, ${butao2.innerHTML}, ${butao3.innerHTML}, imagem: ${randIndex2}, ${matchingNames}`)
+
       } while (matchingNames !== 1);
 
     })
