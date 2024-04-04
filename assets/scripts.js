@@ -25,23 +25,18 @@ function fetchar() {
       
       const randIndex2 = Math.floor(Math.random() * data.imgs.length);
 
-      console.log(data.imgs[randIndex2])
+      const randIndex2 = Math.floor(Math.random() * data.imgs.length);
+      const randNome2 = data.imgs[randIndex2];
 
-      image.src = `assets/database/images/${data.imgs[randIndex2]}.png`  
+      const randomButtonIndex = Math.floor(Math.random() * 3) + 1; // Randomly select a button (1, 2, or 3)
+      const buttonWithSameIndex = document.getElementById(`butao${randomButtonIndex}`);
+      buttonWithSameIndex.textContent = randNome2; // Assign the image name to the randomly selected button
 
-      let matchingNames = 0;
-      
-      do {
-        randomizar(data.nomes, butao1);
-        randomizar(data.nomes, butao2);
-        randomizar(data.nomes, butao3);
+      const otherButtons = [butao1, butao2, butao3].filter(button => button !== buttonWithSameIndex);
+      otherButtons.forEach(button => randomizar(data.nomes, button));
 
-        matchingIndexes = data.nomes.filter((_, index) => index === randIndex2).length;
-
-        console.log(`Loop: ${butao1.innerHTML}, ${butao2.innerHTML}, ${butao3.innerHTML}, imagem: ${randIndex2}, ${matchingNames}`)
-
-      } while (matchingNames !== 1);
-
+      console.log(randNome2);
+      image.src = `assets/database/images/${randNome2}.png`;
     })
     .catch(error => console.error("Erro carregando database JSON: ", error))  
 }
