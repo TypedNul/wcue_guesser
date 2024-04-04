@@ -13,6 +13,8 @@ function randomizar(lista, butao) {
 
 }
 
+// é bem especifico e nao general-use, cuidado pq eu nao sei q porra eu fiz aq 
+
 function hasDuplicates(array) {
   const buttonTexts = [];
   
